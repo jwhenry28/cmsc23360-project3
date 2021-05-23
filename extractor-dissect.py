@@ -359,13 +359,13 @@ def TOTAL_FEATURES(trace_data, max_size=175):
     ALL_FEATURES.append("-")
     ALL_FEATURES.append(perc_out) # percentage of outgoing packets
     ALL_FEATURES.append("-")
-    ALL_FEATURES.extend(altconc) 
+    ALL_FEATURES.extend(altconc) # TODO: ASK IN OFFICE HOURS
     ALL_FEATURES.append("-")
-    ALL_FEATURES.extend(alt_per_sec)
+    ALL_FEATURES.extend(alt_per_sec) #
     ALL_FEATURES.append("-")
-    ALL_FEATURES.append(sum(altconc))
+    ALL_FEATURES.append(sum(altconc)) #
     ALL_FEATURES.append("-")
-    ALL_FEATURES.append(sum(alt_per_sec))
+    ALL_FEATURES.append(sum(alt_per_sec)) #
     ALL_FEATURES.append("-")
     ALL_FEATURES.append(sum(intertimestats)) # sum of all max(In)
     ALL_FEATURES.append("-")
