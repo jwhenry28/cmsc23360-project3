@@ -2,6 +2,11 @@ import pickle
 import json
 import pprint
 
+# with open("results/clean", "r") as f:
+#     data = json.load(f)
+
+#     for i in range(8400):
+#         print(len(data["feature"][i]))
 
 with open("results/raw_data", "rb") as infile:
     data = pickle.load(infile)

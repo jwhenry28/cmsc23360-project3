@@ -322,56 +322,60 @@ def TOTAL_FEATURES(trace_data, max_size=175):
 
     # TIME Features
     ALL_FEATURES.extend(intertimestats) # list of all the max(In)
-    ALL_FEATURES.append("-")
+    # ALL_FEATURES.append("-1")
     ALL_FEATURES.extend(timestats) # list of 25,50,75,100 percentiles for In, Out, Total
-    ALL_FEATURES.append("-")
+    # ALL_FEATURES.append("-2")
     ALL_FEATURES.extend(number_pkts) # count of In, Out, and Total
-    ALL_FEATURES.append("-")
+    # ALL_FEATURES.append("-3")
     ALL_FEATURES.extend(thirtypkts) # count of In and Out packages in the fist and last 30 packages
-    ALL_FEATURES.append("-")
+    # ALL_FEATURES.append("-4")
     ALL_FEATURES.append(stdconc) # standard deviation of concetration of outgoing packages, concetration is 20 packets
-    ALL_FEATURES.append("-")
+    # ALL_FEATURES.append("-5")
     ALL_FEATURES.append(avgconc) # average of concetraion of outgoing packages
-    ALL_FEATURES.append("-")
+    # ALL_FEATURES.append("-6")
     ALL_FEATURES.append(avg_per_sec) # average number packets sent and received per second
-    ALL_FEATURES.append("-")
+    # ALL_FEATURES.append("-7")
     ALL_FEATURES.append(std_per_sec) # standard packets sent and received per second
-    ALL_FEATURES.append("-")
+    # ALL_FEATURES.append("-8")
     ALL_FEATURES.append(avg_order_in) # average position of in packets
-    ALL_FEATURES.append("-")
+    # ALL_FEATURES.append("-9")
     ALL_FEATURES.append(avg_order_out) # avereage position of out packets
-    ALL_FEATURES.append("-")
+    # ALL_FEATURES.append("-10")
     ALL_FEATURES.append(std_order_in) # standard deviation of in packets
-    ALL_FEATURES.append("-")
+    # ALL_FEATURES.append("-11")
     ALL_FEATURES.append(std_order_out) # standard deviation of out packets
-    ALL_FEATURES.append("-")
+    # ALL_FEATURES.append("-12")
     ALL_FEATURES.append(medconc) # median of concentration of outgoing packages
-    ALL_FEATURES.append("-")
+    # ALL_FEATURES.append("-13")
     ALL_FEATURES.append(med_per_sec) # median number of packets per second
-    ALL_FEATURES.append("-")
+    # ALL_FEATURES.append("-14")
     ALL_FEATURES.append(min_per_sec) # minimum number of packets per second
-    ALL_FEATURES.append("-")
+    # ALL_FEATURES.append("-15")
     ALL_FEATURES.append(max_per_sec) # maxium number of packets per second
-    ALL_FEATURES.append("-")
+    # ALL_FEATURES.append("-16")
     ALL_FEATURES.append(maxconc) # max of concetration of outgoing packages
-    ALL_FEATURES.append("-")
+    # ALL_FEATURES.append("-17")
     ALL_FEATURES.append(perc_in) # percentage of incoming packets
-    ALL_FEATURES.append("-")
+    # ALL_FEATURES.append("-18")
     ALL_FEATURES.append(perc_out) # percentage of outgoing packets
-    ALL_FEATURES.append("-")
+    # ALL_FEATURES.append("-19")
     ALL_FEATURES.extend(altconc) # TODO: ASK IN OFFICE HOURS
-    ALL_FEATURES.append("-")
+    # ALL_FEATURES.append("-20")
     ALL_FEATURES.extend(alt_per_sec) #
-    ALL_FEATURES.append("-")
+    # ALL_FEATURES.append("-21")
     ALL_FEATURES.append(sum(altconc)) #
-    ALL_FEATURES.append("-")
+    # ALL_FEATURES.append("-22")
     ALL_FEATURES.append(sum(alt_per_sec)) #
-    ALL_FEATURES.append("-")
+    # ALL_FEATURES.append("-23")
     ALL_FEATURES.append(sum(intertimestats)) # sum of all max(In)
-    ALL_FEATURES.append("-")
+    # ALL_FEATURES.append("-24")
     ALL_FEATURES.append(sum(timestats)) # sum of all percentiles for In, Out, and Total
-    ALL_FEATURES.append("-")
+    # ALL_FEATURES.append("-25")
     ALL_FEATURES.append(sum(number_pkts)) # sum of all the number of packets for In, Out, and Total, should be 2 * Total
+    ALL_FEATURES.append("-26")
+
+    # Data Struct Sketch
+    # 
 
     #SIZE FEATURES
     #ALL_FEATURES.append(tot_size)
@@ -393,8 +397,9 @@ def TOTAL_FEATURES(trace_data, max_size=175):
     # of this particular feature subset, some may be padded with 0's if too short.
 
     ALL_FEATURES.extend(conc)
-
+    # ALL_FEATURES.append("-27")
     ALL_FEATURES.extend(per_sec)
+    # ALL_FEATURES.append("-28")
 
 
     while len(ALL_FEATURES) < max_size:
