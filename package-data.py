@@ -36,4 +36,19 @@ for features, labels in zip(data["feature"], data["label"]):
 pprint.pprint(cleanData)
 
 # turn this into a pandas frame
+cleanData = pd.DataFrame(cleanData)
+
+print(cleanData)
+
 # run ML on it
+
+
+# for variable in cleanData
+    # select all features from cleanData except variable
+    # split data into training and testing sets 
+    # train ForestClassifier on split data
+    # test ForestClassifer on split data
+    # record accuracy
+
+# Get "baseline" accuracy by computing average of all accuracies.
+# Determine how important each feature is based on how much a specific accuracy varies from the "baseline"
